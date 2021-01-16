@@ -2,17 +2,12 @@ import * as React from 'react';
 
 import {AppProvider, useAppContext} from '../AppProvider';
 import {Button, Text, View} from 'react-native';
-import {
-  RenderResult,
-  act,
-  fireEvent,
-  render,
-} from '@testing-library/react-native';
+import {RenderAPI, act, fireEvent, render} from '@testing-library/react-native';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-let testingLib: RenderResult;
+let testingLib: RenderAPI;
 
 const FakeChild = (): React.ReactElement => {
   const {state, resetUser, callDefault} = useAppContext();
@@ -39,7 +34,7 @@ const FakeChild = (): React.ReactElement => {
 };
 
 describe('[AppProvider] rendering test', () => {
-  let json: renderer.ReactTestRendererJSON;
+  let json: renderer.ReactTestRendererJSON | renderer.ReactTestRendererJSON[];
 
   const component = (
     <AppProvider>

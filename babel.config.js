@@ -21,5 +21,21 @@ module.exports = {
         extraOptions: {__self: true},
       },
     ],
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        alias: {
+          apis: './apis',
+          assets: './assets',
+          navigation: './components/navigation',
+          screen: './components/screen',
+          shared: './components/shared',
+          providers: './providers',
+          types: './types',
+          utils: './utils',
+        },
+      },
+    ],
   ],
 };

@@ -2,8 +2,8 @@ import 'react-native';
 
 import React, {ReactElement} from 'react';
 
-import RootProvider from '../src/providers';
-import {ThemeType} from '../src/utils/theme';
+import RootProvider from '../providers';
+import {ThemeType} from './theme';
 
 export const createTestElement = (
   child: ReactElement,

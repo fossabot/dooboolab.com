@@ -1,7 +1,7 @@
 import 'react-native';
 
 import React, {ReactElement} from 'react';
-import {createTestElement, createTestProps} from '../../../../test/testUtils';
+import {createTestElement, createTestProps} from 'utils/testUtils';
 
 import StackNavigator from '../RootStackNavigator';
 import {ThemeType} from '../../../providers/ThemeProvider';
